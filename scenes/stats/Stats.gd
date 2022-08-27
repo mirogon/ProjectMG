@@ -1,7 +1,7 @@
 extends Node2D
 
-export(int) var maxHealth = 100
-export(int) var health = maxHealth
-export(int) var defense = 100
-export(int) var moveSpeed = 100
+var maxHealth = 100
+var health = maxHealth
+var defense = 100
+var moveSpeed = 100
 
