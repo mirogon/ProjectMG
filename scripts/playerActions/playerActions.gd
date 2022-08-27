@@ -1,38 +1,5 @@
 class_name PlayerActions
 
-
-class Direction:
-	var north: bool = false
-	var south: bool = false
-	var west: bool = false
-	var east: bool = false
-
-	func trueNumber():
-		var directionNumber = 0
-		
-		if east:
-			directionNumber = 3
-		if west:
-			directionNumber = 7
-			
-		if north:
-			directionNumber = 1
-			
-			if east:
-				directionNumber = 2
-			elif west:
-				directionNumber = 8
-		
-		if south:
-			directionNumber = 5
-			
-			if east:
-				directionNumber = 4
-			elif west:
-				directionNumber = 6
-		
-		return directionNumber
-
 var currentDirection = 0
 
 func _init():

@@ -1,2 +1,3 @@
 res://scenes/player/Player.tscn
 res://scripts/server/server.gd
+res://scripts/playerActions/playerActions.gd

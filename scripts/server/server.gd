@@ -2,7 +2,7 @@ class_name ServerHandler
 
 var server = PacketPeerUDP.new()
 var serverIp = "127.0.0.1"
-var serverPort = 0
+var serverPort = 55580
 var peer = PacketPeerUDP.new()
 
 enum PacketType {
@@ -10,15 +10,19 @@ enum PacketType {
 }
 
 func _init():
-	if server.bind(serverPort, serverIp) == OK:
-		print("Listening on port: " + str(serverPort) + " ip: " + str(serverIp))
-		server.connect_to_host("127.0.0.1", 55580)
+	if server.bind(0, serverIp) == OK:
+		server.connect_to_host(serverIp, serverPort)
+		print("Successfully established connection to host: " + str(serverIp) + " on port: " + str(serverPort))
 	else: 
-		print("Error trying to connect to server!")
+		print("Couldn't establish connection to host: " + str(serverIp))
 
 func sendMovePacket(moveDirection: Vector2):
-	var packedByte = PackedByteArray([0, PacketType.move, int(moveDirection.x), int(moveDirection.y)])
-	server.put_packet(packedByte)
-	print(packedByte)
+	var clientPacket = PackedByteArray([0, PacketType.move, int(moveDirection.x), int(moveDirection.y)])
+	server.put_packet(clientPacket)
 	print("Sent packet")
 	
+
+func receiveMovePacket():
+	var serverPacket = server.get_packet()
+	
+	print(serverPacket)

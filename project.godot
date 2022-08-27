@@ -27,9 +27,9 @@ _global_script_class_icons={
 [application]
 
 config/name="Project Mg"
+config/features=PackedStringArray("4.0")
 boot_splash/use_filter=false
 config/icon="res://icon.png"
-config/features=PackedStringArray("4.0")
 
 [display]
 
