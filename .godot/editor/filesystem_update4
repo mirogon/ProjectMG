@@ -1,10 +1,5 @@
-res://scenes/player/Player.tscn
-res://scripts/server/server.gd
-res://scripts/playerActions/playerActions.gd
+res://scenes/main/main.gd
+res://scenes/main/main.tscn
+res://scenes/player/Player.gd
 res://scripts/packetHandler/packetHandler.gd
 res://scripts/serverHandler/server.gd
-res://scenes/main/main.tscn
-res://scenes/main/main.gd
-res://scenes/player/Player.gd
-res://scenes/map/map.tscn
-res://scenes/stats/Stats.tscn

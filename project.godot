@@ -28,21 +28,27 @@ _global_script_classes=[{
 "class": &"ServerHandler",
 "language": &"GDScript",
 "path": "res://scripts/serverHandler/server.gd"
+}, {
+"base": "Node2D",
+"class": &"main_scene",
+"language": &"GDScript",
+"path": "res://scenes/main/main.gd"
 }]
 _global_script_class_icons={
 "PacketHandler": "",
 "Player": "",
 "PlayerActions": "",
-"ServerHandler": ""
+"ServerHandler": "",
+"main_scene": ""
 }
 
 [application]
 
 config/name="Project Mg"
 run/main_scene="res://scenes/main/main.tscn"
-config/features=PackedStringArray("4.0")
 boot_splash/use_filter=false
 config/icon="res://icon.png"
+config/features=PackedStringArray("4.0")
 
 [display]
 

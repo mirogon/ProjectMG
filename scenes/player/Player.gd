@@ -3,7 +3,7 @@ extends CharacterBody2D
 class_name Player
 
 
-var serverHandler = ServerHandler.new()
+var serverHandler: ServerHandler
 var playerActions = PlayerActions.new()
 
 func _ready():

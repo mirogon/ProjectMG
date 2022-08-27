@@ -12,16 +12,15 @@ func _init(player: Player):
 	self.player = player
 	
 func handlePacket(packet: PackedByteArray):
-	var packetType = packet.decode_u16(0)
-	
-	EPacketTypes
+	var packetType = packet.decode_u8(1)
+	#print(packetType)
 	match packetType:
 		EPacketTypes.characterPosition:
 			var positionX = packet.decode_float(2)
-			var positionY = packet.decode_u8(6)
-			
+			var positionY = packet.decode_float(6)
+			#print(positionX)
 			player.setPosition(Vector2(positionX, positionY))
-			print("CHARACTERPOSITION PACKET")
+
 		_:
 			pass
 	

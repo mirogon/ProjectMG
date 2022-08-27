@@ -5,9 +5,12 @@
 [ext_resource type="PackedScene" uid="uid://b84bh5lwnpgb" path="res://scenes/map/map.tscn" id="3_de5a1"]
 
 [node name="main" type="Node2D"]
-script = ExtResource("1_wr73g")
+script = ExtResource( "1_wr73g" )
 
-[node name="Player" parent="." instance=ExtResource("2_2obmp")]
+[node name="Player" parent="." instance=ExtResource( "2_2obmp" )]
 z_index = 1
 
-[node name="map" parent="." instance=ExtResource("3_de5a1")]
+[node name="map" parent="." instance=ExtResource( "3_de5a1" )]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+current = true
