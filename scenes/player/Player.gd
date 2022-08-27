@@ -1,5 +1,8 @@
 extends CharacterBody2D
 
+class_name Player
+
+
 var serverHandler = ServerHandler.new()
 var playerActions = PlayerActions.new()
 
@@ -11,8 +14,13 @@ func _physics_process(delta):
 
 func move():
 	var moveDirection = playerActions.getCurrentMoveDirection()
-	
 	if moveDirection != null:
-		serverHandler.sendMovePacket(moveDirection)
+		var packetType = PacketHandler.EPacketTypes.move
+		var packet = PackedByteArray([0, int(packetType), int(moveDirection.x), int(moveDirection.y)])
+		serverHandler.putPacket(packet)
+		
+
+func setPosition(position: Vector2):
+	self.position = position
 	
 
