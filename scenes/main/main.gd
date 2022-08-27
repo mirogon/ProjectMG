@@ -9,6 +9,7 @@ var activeProcess = true
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	serverHandler.putPacket(PackedByteArray([0, packetHandler.EPacketTypes.registration]))
 	thread = Thread.new()
 	thread.start(_packet_handler_thread, Thread.PRIORITY_NORMAL)
 

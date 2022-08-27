@@ -3,8 +3,9 @@ class_name PacketHandler
 var player: Player
 
 enum EPacketTypes {
-	move = 1,
-	characterPosition = 2
+	registration = 1,
+	move = 2,
+	characterPosition = 3
 }
 
 func _init(player: Player):

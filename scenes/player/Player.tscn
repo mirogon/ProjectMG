@@ -1,6 +1,6 @@
 [gd_scene load_steps=18 format=3 uid="uid://diesl6jk10sbs"]
 
-[ext_resource type="PackedScene" path="res://scenes/stats/Stats.tscn" id="1"]
+[ext_resource type="PackedScene" uid="uid://vqcdei3fuyxw" path="res://scenes/stats/Stats.tscn" id="1"]
 [ext_resource type="Script" path="res://scenes/player/Player.gd" id="2"]
 [ext_resource type="Texture2D" uid="uid://cct1ef6y1egf8" path="res://sprites/players/moonlight/backAnimation.png" id="3"]
 [ext_resource type="Texture2D" uid="uid://c1obdpvanm02f" path="res://sprites/players/moonlight/frontAnimation.png" id="4_ufi0e"]
@@ -75,6 +75,7 @@ script = ExtResource("2")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 current = true
+zoom = Vector2(3, 3)
 
 [node name="AnimatedSprite" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
