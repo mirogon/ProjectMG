@@ -1,4 +1,2 @@
 res://scenes/player/Player.tscn
-res://scenes/player/Player.gd
 res://scripts/server/server.gd
-res://scripts/playerActions/playerActions.gd
