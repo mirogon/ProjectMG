@@ -27,8 +27,8 @@ func getCurrentMoveDirection():
 	if directionChange == false:
 		return null
 
-	if Input.is_action_pressed("walk_north"): currentDirection.y += 1
-	if Input.is_action_pressed("walk_south"): currentDirection.y -= 1
+	if Input.is_action_pressed("walk_north"): currentDirection.y -= 1
+	if Input.is_action_pressed("walk_south"): currentDirection.y += 1
 	
 	if Input.is_action_pressed("walk_east"): currentDirection.x += 1
 	if Input.is_action_pressed("walk_west"): currentDirection.x -= 1

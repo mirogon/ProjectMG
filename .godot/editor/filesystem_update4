@@ -1,5 +1,2 @@
-res://scenes/main/main.gd
 res://scenes/main/main.tscn
-res://scenes/player/Player.gd
-res://scripts/packetHandler/packetHandler.gd
-res://scripts/serverHandler/server.gd
+res://scripts/playerActions/playerActions.gd
